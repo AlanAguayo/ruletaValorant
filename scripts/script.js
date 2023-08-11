@@ -68,18 +68,17 @@ $(document).ready(function () {
   $('#start').on('click', function () {
     rPlayer = Math.floor(Math.random() * filteredPlayers.length);
     rAgente = Math.floor(Math.random() * filteredAgents.length);
-    
-      spinWheel(rAgente, ".agent", filteredAgents.length, 5);
 
+    spinWheel(rAgente, ".agent", filteredAgents.length, 5)
     setTimeout(function () {
-    spinWheel(rPlayer, ".player", filteredPlayers.length, 10);
-     }, 6000);
+      spinWheel(rPlayer, ".player", filteredPlayers.length, 10);
+    }, 6000);
 
     $('button').prop('disabled', true);
 
     setTimeout(function () {
       $('button').prop('disabled', false);
-    }, 6100);
+    }, 12100);
   });
 
   $('#player1, #player2, #player3, #player4, #player5').on('input', function () {
