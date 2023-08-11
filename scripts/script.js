@@ -68,11 +68,12 @@ $(document).ready(function () {
   $('#start').on('click', function () {
     rPlayer = Math.floor(Math.random() * filteredPlayers.length);
     rAgente = Math.floor(Math.random() * filteredAgents.length);
+    
+      spinWheel(rAgente, ".agent", filteredAgents.length, 5);
 
+    setTimeout(function () {
     spinWheel(rPlayer, ".player", filteredPlayers.length, 10);
-    setTimeout(function () { 
-      spinWheel(rAgente, ".agent", filteredAgents.length, 5) 
-    }, 6000);
+     }, 6000);
 
     $('button').prop('disabled', true);
 
