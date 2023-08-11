@@ -1,0 +1,202 @@
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background: #191B28;
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
+  display: block;
+  color: white;
+}
+
+.roulette {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.selector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  z-index: 1;
+  height: 100%;
+  background-color: cyan;
+}
+
+.wheel,
+.row {
+  display: flex;
+}
+
+.cardAgent,
+.cardPlayer {
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  background: brown;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardAgent .agentImage {
+  width: 100%;
+}
+
+.cardAgent .agentName {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+.cardPlayer {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+.buttons {
+  text-align: center;
+  display: flex;
+  margin: auto;
+  display: block;
+  padding-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 0 0 1%;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  background-color: #1f6690;
+}
+
+.bottom {
+  display: flex;
+}
+
+.listPlayers,
+.listAgents {
+  width: 50%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.playerText {
+  width: 50%;
+  margin: 3px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.playerText:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.playerText::placeholder {
+  color: #999;
+}
+
+.cAgents,
+.lPlayers {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cAgents {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.cAgentst li,
+.lPlayers li {
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.cAgents label,
+.lPlayers label {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.cAgents input[type="checkbox"],
+.lPlayers input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999;
+  background-color: #fff;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.lPlayers input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+}
+
+.cAgents input[type="checkbox"]:checked,
+.lPlayers input[type="checkbox"]:checked {
+  background-color: #66afe9;
+  border-color: #66afe9;
+}
+
+.cAgents input[type="checkbox"]:checked::after,
+.lPlayers input[type="checkbox"]:checked::after {
+  content: "\2713";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.lAgent {
+  color: white;
+  font-size: larger;
+}
